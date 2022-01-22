@@ -1,7 +1,8 @@
 import fasttext
+import os
 
 if not 'model' in globals():
-	model = fasttext.load_model("/media/jacob/DATA1/T0RR3NTZ/cc.cs.300.bin")
+	model = fasttext.load_model(os.environ['FASTTEXT_PATH'])
 else:
 	model = globals()['model']
 
